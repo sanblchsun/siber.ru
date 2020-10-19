@@ -1,0 +1,15 @@
+'use strict';
+$(document).ready(function($) {
+
+
+	// Выпадающий список
+	// =================
+
+	var $structureWrap = $('.structure__item');
+	$('.structure__hidden-link').on('click', function(event) {
+		var $self = $(this);
+			$self.siblings('.structure__hidden-description').slideToggle();
+			$self.toggleClass('active');
+	});
+
+});

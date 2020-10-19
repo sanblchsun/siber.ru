@@ -1,0 +1,121 @@
+'use strict';
+$(document).ready(function() {
+
+	var resizeMap = function(event){
+		var wHeight = $(window).height();
+		var wWidth  = $(window).width();
+
+
+		if (wWidth >= 1000) {
+			$('.dragscroll').scrollLeft(1000);
+			$('.dragscroll').scrollTop(830);
+		}
+
+		if (wWidth < 992) {
+			$('.dragscroll').scrollLeft(1100);
+			$('.dragscroll').scrollTop(700);
+		}
+
+		if (wWidth < 768) {
+			$('.dragscroll').scrollLeft(1200);
+			$('.dragscroll').scrollTop(700);
+		}
+
+		if (wWidth < 600) {
+			$('.dragscroll').scrollLeft(1500);
+			$('.dragscroll').scrollTop(700);
+		}
+	};
+	window.addEventListener('resize', resizeMap, false);
+
+	resizeMap();
+
+
+
+
+	// Прокрутка экрана
+	// ================
+	var $mapWrapper = $('.partner-map__wrapper');
+	function partnerMapHandler(event){
+		event.preventDefault();
+
+		var $self   = $(this);
+		var target  = $self.attr('href') || $self.data('href');
+		var $target = $(target);
+		var offset  = $(target).position();
+
+
+		if (!target) {
+			console.error('Не корректный target для кнопки');
+		}
+
+		TweenMax.to(window, 1, {
+			scrollTo: {
+				y: target,
+				offsetY: app.getfullHeaderHeight() + 100
+			}
+		});
+
+		$target.switchClass('active');
+
+		setTimeout(function(){
+			$target.trigger('click');
+		}, 900);
+
+	}
+
+	$('.js-scroll-to-map').on('click', partnerMapHandler);
+
+
+
+
+	// Текст в модальном окне
+	// ======================
+	var textModal = {
+		$modal: $('#partner-map-modal'),
+		$bodyModal: $('#partner-map-modal .partner-map-card'),
+		$titleModal: $('.modal-services-card__title'),
+		modalEvent: 'show.bs.modal',
+
+		getText: function(buttonElem){
+			return $(buttonElem).find('.partner-map-card').html();
+		},
+		getTitle: function(buttonElem){
+			return $(buttonElem).data('city-name');
+		},
+		showText: function(event){
+			var html  = textModal.getText(event.relatedTarget);
+			var title = textModal.getTitle(event.relatedTarget);
+
+			textModal.$bodyModal.html(html);
+			// textModal.$titleModal.text(title);
+		},
+		init: function(){
+			this.$modal.on(this.modalEvent, this.showText);
+		}
+
+	};
+	textModal.init();
+
+
+});
+
+
+// Ресайз карты
+var $mapImage      = $('.partner-map__image-wrap--desctop');
+var $mapBaloonWrap = $('.map-icon__wrapper--desctop');
+var resizeMapHeight = function(){
+	$mapBaloonWrap.height( $mapImage.height() );
+};
+$(window).on('resize', resizeMapHeight);
+$(window).on('load', resizeMapHeight);
+
+
+// Ресайз карты
+var $mapImageMobail      = $('.partner-map__image-wrap--mobail');
+var $mapBaloonWrapMobail = $('.map-icon__wrapper--mobail');
+var resizeMapHeight = function(){
+	$mapBaloonWrapMobail.height( $mapImageMobail.height() );
+};
+$(window).on('resize', resizeMapHeight);
+$(window).on('load', resizeMapHeight);

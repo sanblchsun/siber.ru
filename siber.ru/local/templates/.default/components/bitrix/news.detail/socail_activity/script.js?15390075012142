@@ -1,0 +1,83 @@
+'use strict';
+$(document).ready(function($) {
+
+	// Выпадашка услуг
+	// ===================
+
+	// $('.services-card-hidden__title-block').on('click', function(event) {
+	// 	var $self = $(this);
+	// 	$self.parents('.services-card-hidden__item').find('.hidden-block').slideToggle();
+	// 	$self.parents('.services-card-hidden__item').toggleClass('active');
+	// });
+
+
+	// // Текст в модальном окне
+	// // ======================
+	// var textModal = {
+	// 	$modal: $('#all-modal'),
+	// 	$bodyModal: $('.modal-services-card__text'),
+	// 	$titleModal: $('.modal-services-card__title'),
+	// 	modalEvent: 'show.bs.modal',
+
+	// 	getText: function(buttonElem){
+	// 		return $(buttonElem).siblings('.services-card-block__modal-text').html();
+	// 	},
+	// 	getTitle: function(buttonElem){
+	// 		return $(buttonElem).siblings('.services-card-block__title').text();
+	// 	},
+	// 	showText: function(event){
+	// 		var html  = textModal.getText(event.relatedTarget);
+	// 		var title = textModal.getTitle(event.relatedTarget);
+
+	// 		textModal.$bodyModal.html(html);
+	// 		textModal.$titleModal.text(title);
+	// 	},
+	// 	init: function(){
+	// 		console.log('init');
+	// 		console.log(this.modalEvent);
+	// 		this.$modal.on(this.modalEvent, this.showText);
+	// 	}
+
+	// };
+	// textModal.init();
+    var $slider = $('.photo-slider');
+    $slider.on('init', function (event) {
+        setTimeout(function () {
+            $('.gray').gray();
+        }, 200)
+    });
+
+	// Слайдер photo
+	// ==============================
+
+	$slider = $('.photo-slider').slick({
+		centerMode: true,
+		dots: true,
+		slidesToShow: 1,
+		slicklidesToScroll: 1,
+		infinite: true,
+		variableWidth: true,
+		prevArrow: '.photo-slider-arrow__wrapper .slider-prev',
+		nextArrow: '.photo-slider-arrow__wrapper .slider-next',
+		responsive: [
+		{
+			breakpoint: 768,
+			settings: {
+				centerMode: true,
+				dots: false,
+				slidesToShow: 1,
+				slicklidesToScroll: 1,
+				infinite: true,
+				variableWidth: false,
+				prevArrow: '.photo-slider-arrow__wrapper .slider-prev',
+				nextArrow: '.photo-slider-arrow__wrapper .slider-next',
+				}
+			}
+
+		]
+	});
+
+
+
+
+});
