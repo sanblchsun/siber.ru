@@ -1,0 +1,320 @@
+.map {
+  position: relative;
+  width: 100%;
+  overflow: hidden !important; }
+
+.map-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  cursor: -webkit-grab;
+  cursor: grab;
+  height: 680px; }
+  @media only screen and (max-width: 992px) {
+    .map-wrapper {
+      overflow: auto; } }
+  @media only screen and (max-width: 768px) {
+    .map-wrapper {
+      position: relative;
+      padding: 0 10px;
+      height: 100% !important;
+      cursor: default; } }
+  .map-wrapper__image {
+    width: 1450px;
+    max-width: none;
+    margin: 0 auto;
+    display: block;
+    height: 680px !important;
+    position: relative; }
+    @media only screen and (max-width: 768px) {
+      .map-wrapper__image {
+        max-width: 100%;
+        height: 100% !important; } }
+
+.map-content {
+  margin: 0 auto;
+  position: relative;
+  max-width: 1368px;
+  padding: 0 19px;
+  width: 100%;
+  min-width: 320px;
+  position: absolute !important;
+  height: auto !important; }
+  @media only screen and (max-width: 768px) {
+    .map-content {
+      padding: 0 10px; } }
+  @media only screen and (max-width: 768px) {
+    .map-content {
+      display: table;
+      width: 100%;
+      position: absolute !important;
+      top: 0;
+      left: 0; } }
+  .map-content__title-wrap {
+    position: relative;
+    color: #ffffff;
+    cursor: default; }
+    .map-content__title-wrap:hover {
+      color: #ffffff; }
+    @media only screen and (max-width: 768px) {
+      .map-content__title-wrap {
+        cursor: pointer;
+        display: inline-block !important;
+        padding: 7px 35px 10px 15px;
+        border: 2px solid #ffffff;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
+        .map-content__title-wrap:hover {
+          opacity: 0.7; } }
+  .map-content__title {
+    font: 300 60px/120% "Proxima Nova", sans-serif;
+    color: #ffffff;
+    display: block;
+    position: absolute;
+    right: 19px;
+    top: 0;
+    z-index: 10;
+    text-align: right;
+    height: auto !important; }
+    @media only screen and (min-width: 1400px) {
+      .map-content__title {
+        font: 100 55px/100% "Proxima Nova", sans-serif; } }
+    @media only screen and (max-width: 1400px) {
+      .map-content__title {
+        font-size: -webkit-calc( (100vw - 768px)/(1400 - 640) * (60 - 16) + 16px);
+        font-size: calc( (100vw - 768px)/(1400 - 640) * (60 - 16) + 16px); } }
+    @media only screen and (max-width: 992px) {
+      .map-content__title {
+        font: 100 30px/100% "Proxima Nova", sans-serif; } }
+    @media only screen and (max-width: 768px) {
+      .map-content__title {
+        position: relative;
+        display: table-cell;
+        vertical-align: middle;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        right: 0;
+        font: 100 16px/130% "Proxima Nova", sans-serif; } }
+    .map-content__title--hidden {
+      display: none; }
+      @media only screen and (max-width: 768px) {
+        .map-content__title--hidden {
+          display: inline-block;
+          text-transform: none;
+          color: #ffffff; }
+          .map-content__title--hidden:before {
+            content: '';
+            position: absolute;
+            background-image: url(/local/static/build/img/sprite/sprite.png);
+            background-position: -307px -228px;
+            width: 12px;
+            height: 9px;
+            right: 15px;
+            top: 20px; } }
+    .map-content__title span {
+      color: #999;
+      font: bold 100px/120% "Proxima Nova", sans-serif;
+      text-transform: uppercase; }
+      @media only screen and (min-width: 1400px) {
+        .map-content__title span {
+          font: bold 100px/100% "Proxima Nova", sans-serif; } }
+      @media only screen and (max-width: 1400px) {
+        .map-content__title span {
+          font-size: -webkit-calc( (100vw - 768px)/(1400 - 640) * (100 - 24) + 24px);
+          font-size: calc( (100vw - 768px)/(1400 - 640) * (100 - 24) + 24px); } }
+      @media only screen and (max-width: 1280px) {
+        .map-content__title span {
+          margin: 0 0 30px 0; } }
+      @media only screen and (max-width: 992px) {
+        .map-content__title span {
+          margin: 0 0 20px 0;
+          font: bold 52px/100% "Proxima Nova", sans-serif; } }
+      @media only screen and (max-width: 768px) {
+        .map-content__title span {
+          font: bold 24px/120% "Proxima Nova", sans-serif;
+          margin: 0 0 5px 0; } }
+
+.map-icon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0; }
+  @media only screen and (max-width: 768px) {
+    .map-icon {
+      display: none; } }
+  .map-icon__wrapper {
+    width: 1450px;
+    max-width: none;
+    margin: 0 auto;
+    height: 680px;
+    display: block;
+    position: relative;
+    margin: 0 auto; }
+  .map-icon__item {
+    position: absolute;
+    height: 39px;
+    width: 27px;
+    cursor: pointer; }
+    .map-icon__item--1 {
+      left: 154px;
+      top: 400px; }
+    .map-icon__item--2 {
+      left: 174px;
+      top: 267px; }
+    .map-icon__item--3 {
+      left: 205px;
+      top: 267px; }
+    .map-icon__item--4 {
+      left: 217px;
+      top: 300px; }
+    .map-icon__item--5 {
+      left: 240px;
+      top: 267px; }
+    .map-icon__item--6 {
+      left: 245px;
+      top: 310px; }
+    .map-icon__item--7 {
+      left: 265px;
+      top: 295px; }
+    .map-icon__item--8 {
+      top: 410px;
+      left: 260px; }
+    .map-icon__item--9 {
+      top: 255px;
+      left: 280px; }
+    .map-icon__item--10 {
+      left: 287px;
+      top: 293px; }
+    .map-icon__item--11 {
+      top: 345px;
+      left: 300px; }
+    .map-icon__item--12 {
+      left: 300px;
+      top: 400px; }
+    .map-icon__item--13 {
+      left: 330px;
+      top: 370px; }
+    .map-icon__item--14 {
+      left: 360px;
+      top: 430px; }
+    .map-icon__item--15 {
+      left: 350px;
+      top: 320px; }
+    .map-icon__item--16 {
+      top: 360px;
+      left: 365px; }
+    .map-icon__item--17 {
+      top: 440px;
+      left: 405px; }
+    .map-icon__item--18 {
+      left: 410px;
+      top: 360px; }
+    .map-icon__item--19 {
+      top: 400px;
+      left: 450px; }
+    .map-icon__item--20 {
+      left: 525px;
+      top: 475px; }
+    .map-icon__item--21 {
+      left: 570px;
+      top: 510px; }
+    .map-icon__item--22 {
+      left: 900px;
+      top: 550px; }
+    .map-icon__item--23 {
+      left: 1200px;
+      top: 608px; }
+    .map-icon__item--24 {
+      top: 200px;
+      left: 280px; }
+
+.map-icon__item.active .map-img-hover {
+  opacity: 1;
+  z-index: 10; }
+
+.map-img-hover {
+  opacity: 0; }
+
+.map-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 39px;
+  width: 27px;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease; }
+
+.map-hidden-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%; }
+  @media only screen and (max-width: 768px) {
+    .map-hidden-wrap {
+      display: none; } }
+  .map-hidden-wrap__block {
+    max-width: 1368px;
+    height: 680px;
+    margin: 0 auto;
+    position: relative; }
+    @media only screen and (max-width: 1450px) {
+      .map-hidden-wrap__block {
+        height: 600px; } }
+    @media only screen and (max-width: 768px) {
+      .map-hidden-wrap__block {
+        height: 400px; } }
+
+.map-hidden {
+  position: absolute;
+  background-color: #1f1f1f;
+  max-width: 420px;
+  bottom: 0;
+  right: 19px;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  padding: 32px 60px 32px 32px;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 100;
+  display: none; }
+  @media only screen and (max-width: 768px) {
+    .map-hidden {
+      right: 10px;
+      padding: 15px 60px 15px 15px;
+      width: 300px; } }
+  .map-hidden.active {
+    opacity: 1;
+    display: block; }
+  .map-hidden__link {
+    font: 500 30px/130% "Proxima Nova", sans-serif;
+    color: #ffffff;
+    display: inline-block;
+    position: relative;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease; }
+    .map-hidden__link:hover {
+      color: #777777; }
+    @media only screen and (min-width: 1400px) {
+      .map-hidden__link {
+        font: 500 30px/130% "Proxima Nova", sans-serif; } }
+    @media only screen and (max-width: 1400px) {
+      .map-hidden__link {
+        font-size: -webkit-calc( (100vw - 768px)/(1400 - 640) * (30 - 16) + 16px);
+        font-size: calc( (100vw - 768px)/(1400 - 640) * (30 - 16) + 16px); } }
+    @media only screen and (max-width: 992px) {
+      .map-hidden__link {
+        font: 500 18px/100% "Proxima Nova", sans-serif; } }
+    @media only screen and (max-width: 640px) {
+      .map-hidden__link {
+        font: 500 16px/120% "Proxima Nova", sans-serif; } }
+  .map-hidden__link + .map-hidden__link {
+    margin: 20px 0 0 0; }
+  .map-hidden__link-img {
+    width: 12px;
+    position: absolute;
+    left: 0;
+    top: 9px;
+    display: none; }

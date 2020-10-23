@@ -1,0 +1,146 @@
+.figures {
+  margin: 0 auto;
+  position: relative;
+  max-width: 1368px;
+  padding: 0 19px;
+  width: 100%;
+  min-width: 320px;
+  background-color: transparent;
+  padding-top: 80px;
+  padding-bottom: 80px; }
+  @media only screen and (max-width: 768px) {
+    .figures {
+      padding: 0 10px; } }
+  @media only screen and (max-width: 992px) {
+    .figures {
+      padding-top: 60px;
+      padding-bottom: 60px; } }
+  .figures__item {
+    position: relative;
+    display: block;
+    max-height: 470px;
+    margin-bottom: 80px;
+    display: table;
+    width: 100%; }
+    .figures__item:last-child {
+      margin-bottom: 0; }
+    @media only screen and (max-width: 992px) {
+      .figures__item {
+        margin-bottom: 60px; } }
+  .figures__image {
+    display: table-cell;
+    position: relative;
+    vertical-align: bottom;
+    width: 60%; }
+  .figures__img-wrap {
+    position: relative;
+    width: 100%; }
+    .figures__img-wrap img {
+      max-height: 470px; }
+  .figures__content {
+    display: table-cell;
+    position: relative;
+    vertical-align: bottom;
+    width: 40%; }
+    .figures__content--right {
+      padding: 0 30px 0 0; }
+      @media only screen and (max-width: 992px) {
+        .figures__content--right {
+          padding: 0 20px 0 0; } }
+      @media only screen and (max-width: 640px) {
+        .figures__content--right {
+          padding: 0 10px 0 0; } }
+    .figures__content--left {
+      padding: 0 0 0 30px; }
+      @media only screen and (max-width: 992px) {
+        .figures__content--left {
+          padding: 0 0 0 20px; } }
+      @media only screen and (max-width: 640px) {
+        .figures__content--left {
+          padding: 0 0 0 10px; } }
+  .figures__numbercn {
+    font: bold 100px/100% "Proxima Nova", sans-serif;
+    text-transform: uppercase;
+    margin: 0 0 60px 0;
+    color: #999999; }
+    @media only screen and (min-width: 1400px) {
+      .figures__numbercn {
+        font: bold 100px/100% "Proxima Nova", sans-serif; } }
+    @media only screen and (max-width: 1400px) {
+      .figures__numbercn {
+        font-size: -webkit-calc( (100vw - 768px)/(1400 - 640) * (100 - 24) + 24px);
+        font-size: calc( (100vw - 768px)/(1400 - 640) * (100 - 24) + 24px); } }
+    @media only screen and (max-width: 1280px) {
+      .figures__numbercn {
+        margin: 0 0 30px 0; } }
+    @media only screen and (max-width: 992px) {
+      .figures__numbercn {
+        margin: 0 0 20px 0;
+        font: bold 52px/100% "Proxima Nova", sans-serif; } }
+    @media only screen and (max-width: 640px) {
+      .figures__numbercn {
+        font: bold 24px/120% "Proxima Nova", sans-serif;
+        margin: 0 0 5px 0; } }
+  .figures__number {
+    font: bold 100px/100% "Proxima Nova", sans-serif;
+    text-transform: uppercase;
+    margin: 0 0 60px 0;
+    color: #999999; }
+    @media only screen and (min-width: 1400px) {
+      .figures__number {
+        font: bold 100px/100% "Proxima Nova", sans-serif; } }
+    @media only screen and (max-width: 1400px) {
+      .figures__number {
+        font-size: -webkit-calc( (100vw - 768px)/(1400 - 640) * (100 - 24) + 24px);
+        font-size: calc( (100vw - 768px)/(1400 - 640) * (100 - 24) + 24px); } }
+    @media only screen and (max-width: 1280px) {
+      .figures__number {
+        margin: 0 0 30px 0; } }
+    @media only screen and (max-width: 992px) {
+      .figures__number {
+        margin: 0 0 20px 0;
+        font: bold 52px/100% "Proxima Nova", sans-serif; } }
+    @media only screen and (max-width: 640px) {
+      .figures__number {
+        font: bold 24px/120% "Proxima Nova", sans-serif;
+        margin: 0 0 5px 0; } }
+  .figures__numbercn {
+    font: bold 100px/100% "Proxima Nova", sans-serif;
+    text-transform: uppercase;
+    margin: 0 0 60px 0;
+    color: #999999; }
+    @media only screen and (min-width: 1400px) {
+      .figures__numbercn {
+        font: bold 100px/100% "Proxima Nova", sans-serif; } }
+    @media only screen and (max-width: 1400px) {
+      .figures__numbercn {
+        font-size: -webkit-calc( (100vw - 768px)/(1400 - 640) * (100 - 24) + 24px);
+        font-size: calc( (100vw - 768px)/(1400 - 640) * (100 - 24) + 24px); } }
+    @media only screen and (max-width: 1280px) {
+      .figures__numbercn {
+        margin: 0 0 30px 0; } }
+    @media only screen and (max-width: 992px) {
+      .figures__numbercn {
+        margin: 0 0 20px 0;
+        font: bold 52px/100% "Proxima Nova", sans-serif; } }
+    @media only screen and (max-width: 640px) {
+      .figures__numbercn {
+        font: bold 24px/120% "Proxima Nova", sans-serif;
+        margin: 0 0 5px 0; } }
+  .figures__text {
+    font: 100 60px/100% "Proxima Nova", sans-serif;
+    text-transform: lowercase;
+    color: #ffffff; }
+    @media only screen and (min-width: 1400px) {
+      .figures__text {
+        font: 100 55px/100% "Proxima Nova", sans-serif; } }
+    @media only screen and (max-width: 1400px) {
+      .figures__text {
+        font-size: -webkit-calc( (100vw - 768px)/(1400 - 640) * (60 - 16) + 16px);
+        font-size: calc( (100vw - 768px)/(1400 - 640) * (60 - 16) + 16px); } }
+    @media only screen and (max-width: 992px) {
+      .figures__text {
+        font: 100 30px/100% "Proxima Nova", sans-serif; } }
+    @media only screen and (max-width: 640px) {
+      .figures__text {
+        font: 100 16px/130% "Proxima Nova", sans-serif; } }

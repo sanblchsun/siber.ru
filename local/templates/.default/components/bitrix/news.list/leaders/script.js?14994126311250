@@ -1,0 +1,52 @@
+'use strict';
+$(document).ready(function($) {
+
+	// Табы
+	// ====
+	var $tabBtn  = $('.leaders__btn');
+	var $tabWrap = $('.leaders__tab-item');
+	$tabBtn.on('click', function(event) {
+		var $self = $(this);
+		var index = $self.index();
+
+		$self.switchClass('active');
+		$tabWrap.eq(index).switchClass('active');
+
+	});
+
+
+	// Текст в модальном окне
+	// ======================
+	var textModal = {
+		$modal: $('#leaders-modal'),
+		$bodyModal: $('.modal-leaders__text'),
+		$bodyImg: $('.modal-leaders__image'),
+		$titleModal: $('.modal-leaders__title'),
+		modalEvent: 'show.bs.modal',
+
+		getText: function(buttonElem){
+			console.log($(buttonElem).siblings('.leaders__description'));
+			return $(buttonElem).siblings('.leaders__description').html();
+		},
+		getTitle: function(buttonElem){
+			return $(buttonElem).siblings('.leaders__title').text();
+		},
+		showText: function(event){
+			var html  = textModal.getText(event.relatedTarget);
+			var title = textModal.getTitle(event.relatedTarget);
+
+			textModal.$bodyModal.html(html);
+			textModal.$titleModal.text(title);
+		},
+		init: function(){
+			console.log('init');
+			console.log(this.modalEvent);
+			this.$modal.on(this.modalEvent, this.showText);
+		}
+
+	};
+	textModal.init();
+
+
+
+});
