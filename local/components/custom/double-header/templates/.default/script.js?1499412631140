@@ -1,5 +1,0 @@
-$(document).ready(function(){
-	if($('.hasmenu').hasClass('mobile')){
-		$('.double-header').removeClass('double-header--double-menu');
-	}
-});
