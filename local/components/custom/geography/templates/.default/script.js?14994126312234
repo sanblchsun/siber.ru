@@ -1,0 +1,93 @@
+'use strict';
+$(document).ready(function($) {
+
+	var resizeMap = function(event){
+		var wHeight = $(window).height();
+		var wWidth  = $(window).width();
+
+		if (wWidth >= 1000) {
+			$('.dragscroll-min-map').scrollLeft(0);
+			$('.dragscroll-min-map').scrollTop(200);
+			$('.dragscroll-big-map').scrollLeft(1000);
+			$('.dragscroll-big-map').scrollTop(690);
+		}
+
+		if (wWidth < 992) {
+			$('.dragscroll-min-map').scrollLeft(0);
+			$('.dragscroll-min-map').scrollTop(200);
+			$('.dragscroll-big-map').scrollLeft(1100);
+			$('.dragscroll-big-map').scrollTop(690);
+		}
+
+		if (wWidth < 768) {
+			$('.dragscroll-min-map').scrollLeft(0);
+			$('.dragscroll-min-map').scrollTop(200);
+			$('.dragscroll-big-map').scrollLeft(1200);
+			$('.dragscroll-big-map').scrollTop(690);
+		}
+
+		if (wWidth < 600) {
+			$('.dragscroll-min-map').scrollLeft(50);
+			$('.dragscroll-min-map').scrollTop(200);
+			$('.dragscroll-big-map').scrollLeft(1270);
+			$('.dragscroll-big-map').scrollTop(500);
+
+		}
+	};
+	window.addEventListener('resize', resizeMap, false);
+
+	resizeMap();
+
+
+
+	// Табы
+	// ====
+	var $tabBtn  = $('.geography__btn');
+	var $tabWrap = $('.geography__item');
+	$tabBtn.on('click', function(event) {
+		var $self = $(this);
+		var index = $self.index();
+
+		$self.switchClass('active');
+		$tabWrap.eq(index).switchClass('active');
+
+		resizeMap();
+	});
+
+
+
+	// Текст в модальном окне
+	// ======================
+	var textModal = {
+		$modal: $('#partner-map-modal'),
+		$bodyModal: $('#partner-map-modal .partner-map-card'),
+		$titleModal: $('.modal-services-card__title'),
+		modalEvent: 'show.bs.modal',
+
+		getText: function(buttonElem){
+			console.log($(buttonElem));
+			return $(buttonElem).find('.partner-map-card').html();
+		},
+		getTitle: function(buttonElem){
+			return $(buttonElem).data('city-name');
+		},
+		showText: function(event){
+			console.log(event.relatedTarget);
+			var html  = textModal.getText(event.relatedTarget);
+			var title = textModal.getTitle(event.relatedTarget);
+
+			textModal.$bodyModal.html(html);
+			// textModal.$titleModal.text(title);
+		},
+		init: function(){
+			console.log('init');
+			console.log(this.modalEvent);
+			this.$modal.on(this.modalEvent, this.showText);
+		}
+
+	};
+	textModal.init();
+
+
+
+});

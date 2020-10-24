@@ -1,0 +1,15 @@
+'use strict';
+$(document).ready(function($) {
+
+
+	// "Оставить заявку - главная"
+	// ==========================
+	$('#form-application-modal').doubleValidate({
+		validateSuccess: function(data){
+			$('#form-application-modal .form__wrapper').slideUp();
+			$('#form-application-modal .form__success').slideDown();
+		}
+	});
+
+
+});

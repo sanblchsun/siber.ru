@@ -1,0 +1,38 @@
+'use strict';
+$(document).ready(function($) {
+
+
+	// "Стать партнером"
+	// =========================
+	if ($('#form-partner').length > 0)
+	$('#form-partner').doubleValidate({
+		validateSuccess: function(data){
+			$('#form-partner .form__wrapper').slideUp();
+			$('#form-partner .form__success').slideDown();
+		}
+	});
+
+	// ЗАГРУЗКА ФАЙЛОВ
+	// отслеживаем изменение инпута file
+	var fileHandler = function(){
+		$('.custom-file__inputfile').change(function(){
+			var $self      = $(this);
+			var fileResult = $self.val();
+			$self
+				.parents('.custom-file')
+				.find('.custom-file__inputtext')
+				.val(fileResult.replace("fakepath","attachments"));
+			$('.custom-file__delete').fadeTo(100, 1);
+		});
+		$('.custom-file__delete').on('click', function () {
+			var $self = $(this);
+			$self.val('');
+			$('#fileinput').val('');
+			$('.custom-file__delete').fadeTo(100, 0);
+			$('.custom-file__inputtext').val('');
+		});
+	};
+	fileHandler();
+
+
+});
