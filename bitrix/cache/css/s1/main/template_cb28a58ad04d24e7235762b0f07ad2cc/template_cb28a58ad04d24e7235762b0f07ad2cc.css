@@ -117,8 +117,8 @@ button[disabled], html input[disabled] {
   cursor: default; }
 
 input[type='checkbox'], input[type='radio'] {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
   padding: 0; }
 
 input[type='search'] {
@@ -156,8 +156,8 @@ a:active, a:focus, a:hover {
   outline: 0; }
 
 *, *::before, *::after {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
 
 body #bx-panel {
   top: 0 !important;
@@ -1684,8 +1684,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     opacity: 0.95 !important; }
 
 .modal-dialog {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
   max-width: 1110px !important;
   width: 100% !important;
   background-color: #ffffff;
@@ -3718,7 +3718,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     display: block;
     text-align: left;
     color: #ffffff;
-    font: 300 12px/67px "Proxima Nova", sans-serif;
+    font: 300 18px/67px "Proxima Nova", sans-serif;
     white-space: nowrap;
     text-transform: uppercase;
     height: 100%;
@@ -3727,7 +3727,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
       color: #ffffff; }
     @media only screen and (min-width: 1500px) {
       .header-menu__link {
-        font: 300 12px/67px "Proxima Nova", sans-serif;
+        font: 300 18px/67px "Proxima Nova", sans-serif;
         padding-right: 30px !important; } }
     @media only screen and (max-width: 1300px) {
       .header-menu__link {
