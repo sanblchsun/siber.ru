@@ -35,12 +35,12 @@ jQuery(document).ready(function($) {
 	queue.on('progress',     onProgress);
 
 
-	queue.loadManifest([
+/*	queue.loadManifest([
 		{
 			id:   '1',
 			src:  '/local/static/assets/video/Siber_3D.mp4'
 		}
-	]);
+	]);*/
 
 	function onComplete(event) {
 		// $state.text( $state.text() + '[All loaded]' );
