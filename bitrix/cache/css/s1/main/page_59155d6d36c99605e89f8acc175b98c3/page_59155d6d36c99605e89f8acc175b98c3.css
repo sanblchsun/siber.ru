@@ -759,6 +759,282 @@
     .main-services__image-wrap--6 .img {
       background-position: 50% 90%; }
 
+.stroi-services {
+  position: relative;
+  min-height: 300px;
+  margin: 0 auto;
+  position: relative;
+  max-width: 1920px;
+  min-width: 320px; }
+  .stroi-services__wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    opacity: 1; }
+    .stroi-services__wrapper:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      opacity: 1;
+      z-index: 1;
+      background-image: url("/local/static/build/img/bg/services/ochrana-obektow.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease; }
+      @media only screen and (max-width: 992px) {
+        .stroi-services__wrapper:before {
+          background: #000; } }
+    .stroi-services__wrapper:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      opacity: 1;
+      z-index: 1;
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(76%, transparent), color-stop(79%, rgba(0, 0, 0, 0.06)), color-stop(82%, rgba(0, 0, 0, 0.17)), color-stop(87%, rgba(0, 0, 0, 0.39)), color-stop(92%, rgba(0, 0, 0, 0.59)), color-stop(98%, rgba(0, 0, 0, 0.81)), to(rgba(0, 0, 0, 0.87)));
+      background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, transparent 76%, rgba(0, 0, 0, 0.06) 79%, rgba(0, 0, 0, 0.17) 82%, rgba(0, 0, 0, 0.39) 87%, rgba(0, 0, 0, 0.59) 92%, rgba(0, 0, 0, 0.81) 98%, rgba(0, 0, 0, 0.87) 100%);
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, transparent 76%, rgba(0, 0, 0, 0.06) 79%, rgba(0, 0, 0, 0.17) 82%, rgba(0, 0, 0, 0.39) 87%, rgba(0, 0, 0, 0.59) 92%, rgba(0, 0, 0, 0.81) 98%, rgba(0, 0, 0, 0.87) 100%); }
+      @media only screen and (max-width: 992px) {
+        .stroi-services__wrapper:after {
+          display: none; } }
+    .stroi-services__wrapper.-hide-bg:before {
+      opacity: 0; }
+  .stroi-services__link {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    font-size: 0;
+    line-height: 0;
+    z-index: 10; }
+    @media only screen and (max-width: 992px) {
+      .stroi-services__link {
+        display: none; } }
+  .stroi-services__item {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 14.2857142857%;
+    background-color: transparent;
+    z-index: 10; }
+    .stroi-services__item:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #000;
+      opacity: 0;
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease; }
+  .stroi-services__mobail {
+    position: relative;
+    display: none;
+    overflow: hidden; }
+    @media only screen and (max-width: 992px) {
+      .stroi-services__mobail {
+        display: block;
+        z-index: 10;
+        height: 100%;
+        width: 100%; } }
+    .stroi-services__mobail:before {
+      content: '';
+      position: absolute;
+      left: -3px;
+      top: -3px;
+      right: -3px;
+      bottom: -3px;
+      border: 1px solid #ffffff;
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease; }
+    .stroi-services__mobail:hover:before {
+      left: 5px;
+      top: 5px;
+      right: 5px;
+      bottom: 5px; }
+  .stroi-services__table {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%; }
+  .stroi-services__cell {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 0 30px; }
+    @media only screen and (max-width: 768px) {
+      .stroi-services__cell {
+        padding: 0 20px; } }
+  .stroi-services__title {
+    display: inline-block;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    font: 300 24px/130% "Proxima Nova", sans-serif; }
+    @media only screen and (max-width: 768px) {
+      .stroi-services__title {
+        font: 300 14px/130% "Proxima Nova", sans-serif; } }
+    .stroi-services__title--btn {
+      padding: 20px;
+      border: 2px solid #ffffff; }
+      @media only screen and (max-width: 768px) {
+        .stroi-services__title--btn {
+          padding: 15px; } }
+  .stroi-services__text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 0 10px 50px; }
+  .stroi-services__icon {
+    display: block;
+    max-width: 70px;
+    margin: 0 auto 20px; }
+    @media only screen and (max-width: 1500px) {
+      .stroi-services__icon {
+        max-width: 55px; } }
+  .stroi-services__name {
+    display: block;
+    text-align: center;
+    color: #ffffff;
+    font: 400 18px/130% "Proxima Nova", sans-serif;
+    font-size: -webkit-calc( (100vw - 1600px)/(1920 - 1600) * (20 - 16) + 16px);
+    font-size: calc( (100vw - 1600px)/(1920 - 1600) * (20 - 16) + 16px);
+    text-transform: uppercase; }
+    @media only screen and (min-width: 1600px) {
+      .stroi-services__name {
+        font: 400 18px/130% "Proxima Nova", sans-serif; } }
+    @media only screen and (max-width: 1500px) {
+      .stroi-services__name {
+        font-size: -webkit-calc( (100vw - 992px)/(1920 - 992) * (20 - 14) + 14px);
+        font-size: calc( (100vw - 992px)/(1920 - 992) * (20 - 14) + 14px); } }
+    @media only screen and (max-width: 992px) {
+      .stroi-services__name {
+        font: 400 16px/130% "Proxima Nova", sans-serif; } }
+  .stroi-services__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    line-height: 0;
+    font-size: 0;
+    z-index: 10; }
+  .stroi-services .img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    width: 100%;
+    max-width: none;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    z-index: 10; }
+    .stroi-services .img:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -100px;
+      bottom: 0;
+      opacity: 1;
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease;
+      z-index: 10; }
+    @media only screen and (max-width: 992px) {
+      .stroi-services .img:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0 !important;
+        bottom: 0;
+        opacity: 0.7 !important;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+        z-index: 10;
+        background: #000 !important; } }
+  .stroi-services__image-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease; }
+    @media only screen and (max-width: 992px) {
+      .stroi-services__image-wrap {
+        position: relative;
+        width: 50%;
+        height: 25%;
+        display: inline-block; }
+        .stroi-services__image-wrap .img {
+          opacity: 1 !important; } }
+    .stroi-services__image-wrap:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -100px;
+      bottom: 0;
+      opacity: 0;
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease;
+      z-index: 10;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(76%, transparent), color-stop(79%, rgba(0, 0, 0, 0.06)), color-stop(82%, rgba(0, 0, 0, 0.17)), color-stop(87%, rgba(0, 0, 0, 0.39)), color-stop(92%, rgba(0, 0, 0, 0.59)), color-stop(98%, rgba(0, 0, 0, 0.81)), to(rgba(0, 0, 0, 0.87)));
+      background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, transparent 76%, rgba(0, 0, 0, 0.06) 79%, rgba(0, 0, 0, 0.17) 82%, rgba(0, 0, 0, 0.39) 87%, rgba(0, 0, 0, 0.59) 92%, rgba(0, 0, 0, 0.81) 98%, rgba(0, 0, 0, 0.87) 100%);
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, transparent 76%, rgba(0, 0, 0, 0.06) 79%, rgba(0, 0, 0, 0.17) 82%, rgba(0, 0, 0, 0.39) 87%, rgba(0, 0, 0, 0.59) 92%, rgba(0, 0, 0, 0.81) 98%, rgba(0, 0, 0, 0.87) 100%); }
+      @media only screen and (max-width: 992px) {
+        .stroi-services__image-wrap:before {
+          display: none; } }
+    .stroi-services__image-wrap--0 {
+      display: none; }
+      @media only screen and (max-width: 992px) {
+        .stroi-services__image-wrap--0 {
+          display: inline-block; } }
+      .stroi-services__image-wrap--0 .img {
+        opacity: 1;
+        background-position: 50% 30%; }
+      .stroi-services__image-wrap--0:before {
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(76%, transparent), color-stop(79%, rgba(0, 0, 0, 0.06)), color-stop(82%, rgba(0, 0, 0, 0.17)), color-stop(87%, rgba(0, 0, 0, 0.39)), color-stop(92%, rgba(0, 0, 0, 0.59)), color-stop(98%, rgba(0, 0, 0, 0.81)), to(rgba(0, 0, 0, 0.87)));
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, transparent 76%, rgba(0, 0, 0, 0.06) 79%, rgba(0, 0, 0, 0.17) 82%, rgba(0, 0, 0, 0.39) 87%, rgba(0, 0, 0, 0.59) 92%, rgba(0, 0, 0, 0.81) 98%, rgba(0, 0, 0, 0.87) 100%);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, transparent 76%, rgba(0, 0, 0, 0.06) 79%, rgba(0, 0, 0, 0.17) 82%, rgba(0, 0, 0, 0.39) 87%, rgba(0, 0, 0, 0.59) 92%, rgba(0, 0, 0, 0.81) 98%, rgba(0, 0, 0, 0.87) 100%); }
+    .stroi-services__image-wrap--1 .img {
+      background-position: 50% 40%; }
+    .stroi-services__image-wrap--2 .img {
+      background-position: 50% 40%; }
+    .stroi-services__image-wrap--3 .img {
+      background-position: 50% 0%; }
+    .stroi-services__image-wrap--5 .img {
+      background-position: 50% 0%; }
+    .stroi-services__image-wrap--6 .img {
+      background-position: 50% 90%; }
+
 .main-services__image-wrap.active .img {
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
